@@ -738,7 +738,7 @@ $el-darkgray: #737373;
               padding-left: 0;
               &.collapse-state-details {
                 // margin-top: 1rem;
-                // margin-bottom: 1.5rem;
+               // margin-bottom: 1.5rem;
                 margin-left: -7px;
                 &.bottom {
                   margin-top: 2rem;
@@ -781,12 +781,13 @@ $el-darkgray: #737373;
               &.view-full-report {
                 display: block;
                 width: 100%;
-                text-align: left;
+                text-align: right;
                 @include media-breakpoint-up(md) {
                   display: inline-block;
                   width: auto;
                   float: right;
                   padding-right: 20px;
+                  text-align: left;
                 }
                 &:after {
                   content: '';
@@ -808,11 +809,16 @@ $el-darkgray: #737373;
           // Styles for when only the prompt is shown.
           &.prompt-only {
             .state-details-list {
+              
               max-height: 0;
               overflow-y: hidden;
               transition: max-height 600ms linear;
             }
             button.expand-state-details {
+              @include media-breakpoint-down(mm) {
+                display: block;
+                margin-top: -31px;
+              }
               max-height: 50px;
               max-width: 200px;
               overflow-x: hidden;
@@ -820,6 +826,11 @@ $el-darkgray: #737373;
               transition: max-height 5ms linear 660ms, max-width 5ms linear 600ms, padding 5ms linear 600ms;
             }
             button.collapse-state-details {
+              @include media-breakpoint-down(mm) {
+               //margin-bottom: 20px;
+               opacity: 0;
+              // transition: display .3s ease;
+              }
               max-height: 0;
               margin: 0;
               max-width: 0;
@@ -833,6 +844,7 @@ $el-darkgray: #737373;
           // Styles for when complete details for state are shown.
           &.details-full {
             .state-details-list {
+    
               max-height: 1500px;
               overflow-y: hidden;
               transition: max-height 200ms linear;
@@ -845,6 +857,10 @@ $el-darkgray: #737373;
               overflow-y: hidden;
             }
             button.collapse-state-details {
+              @include media-breakpoint-down(mm) {
+               display: block;
+               margin-top: -48px;
+              }
               max-height: 50px;
               max-width: 250px;
               overflow-y: hidden;
