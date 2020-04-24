@@ -74,6 +74,12 @@ $alt-bg: #F4F7F9;
     margin-top: 0.8rem;
     margin-bottom: 2.4rem;
   }
+  ul {
+    li {
+      margin-left: 1.6rem;
+      list-style: disc;
+    }
+  }
 }
 
 .acknowledgements {
