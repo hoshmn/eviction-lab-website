@@ -28675,6 +28675,14 @@ ol.list-initial, .text-li ol.list-initial li {
   list-style: disc;
 }
 
+.rankings-intro a.scorecard-carousel {
+  font-family: GT-Eesti-Display-Bold, sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.2px;
+  color: #737373;
+  width: 100%;
+}
+
 .acknowledgements {
   margin-bottom: 1.6rem;
   padding-bottom: 2.4rem;
